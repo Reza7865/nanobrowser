@@ -21,9 +21,11 @@ import {
 import { DOMElementNode, type DOMState } from '../dom/views';
 import { type BrowserContextConfig, DEFAULT_BROWSER_CONTEXT_CONFIG, type PageState } from './types';
 import { createLogger } from '@src/background/log';
-import { use } from 'react/ts5.0';
 
 const logger = createLogger('Page');
+
+// Define the missing type
+type ReadabilityResult = string | any;
 
 declare global {
   interface Window {
